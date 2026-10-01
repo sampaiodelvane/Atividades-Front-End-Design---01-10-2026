@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Semântica e Componentização</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="flex">
+                <li><a href="#banner" class="menu-item">Início</a></li>
+                <li><a href="#food" class="menu-item">Gastronomia</a></li>
+                <li><a href="#itinerary" class="menu-item">Roteiro</a></li>
+            </ul>
+        </nav>
+    </header>
+     
+    <main>
+        <section id="banner" class="flex">
+            <h1 class="title">Descubra a alma do Japão</h1>
+            <p class="text">Uma jornada pelas tradições e paisagens</p>
+            
+            <div class="flex">
+                <a href="#food" class="btn btn-primary">Iniciar jornada</a>
+                <a href="#itinerary" class="btn">Ver roteiros</a>
+            </div>
+        </section>
+        
+        <section id="food">
+            <h2 class="title">Gastronomia milenar</h2>
+
+            <figure class="flex">
+                <img src="./assets/images/sushi.jpg" alt="Sushi">
+                <img src="./assets/images/lamen.jpg" alt="Lamen">
+                <img src="./assets/images/Kaiseki.jpg" alt="Kaiseki">
+            </figure>
+        </section>
+        
+        <section id="itinerary" class="flex">
+            <div class="info">
+                <h2 class="title">Destinos de outro mundo</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ipsa distinctio commodi provident quam facilis vel explicabo reiciendis! Dolore, nam repellat! Iste quod veritatis nostrum assumenda quia adipisci.
+                </p>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, veritatis. Modi cupiditate eius optio consequuntur.
+                </p>
+                
+                <a href="#banner" class="btn btn-secondary">Saiba mais</a>
+            </div>
+
+            <img src="./assets/images/Yakushima.png" alt="Yakushima">
+        </section>
+    </main>
+    
+    <footer>
+        <p class="text">Copyright &copy; 2026</p>
+        <h6 class="text">Desenvolvido por: Cyntia Sayuri</h6>
+    </footer>
+
+</body>
+</html>

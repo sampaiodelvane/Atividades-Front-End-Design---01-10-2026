@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    --primary: #E63946;
+    --secondary: #b8121f;
+    --tertiary: #14386a;
+    --dark: #0b0c10;
+    --light: #F1FAEE;
+    --gray: #93a0b3;
+
+    --title: 'Anton', 'Arial Narrow', sans-serif;
+    --text: 'Work Sans', Arial, sans-serif;
+}
+
+* {  
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--text);
+    background: var(--dark);
+    color: var(--light);
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--light);
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 17px 15px;
+    background: #0b0c10b3;
+    backdrop-filter: blur(10px);
+}
+
+.menu a {
+    color: var(--light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin: 0 15px;
+    padding: 7px 5px;
+    border-bottom: 3px solid transparent;
+    transition: border-color .5s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+#banner {
+    display: flex;
+    align-items: flex-end;
+    height: 93vh;
+    padding: 70px 100px;
+    background-image:
+        linear-gradient(180deg, #0b0c1026 0%, #0b0c108c 55%, var(--dark) 100%),
+        url(./banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: var(--title);
+    color: var(--light);
+    text-transform: uppercase;
+    font-size: 100px;
+    line-height: 1;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 3px 3px 2px var(--secondary), 5px 7px 2px var(--tertiary);
+}
+
+h1 span {
+    display: block;
+    color: var(--primary);
+    font-family: var(--text);
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 20px;
+    font-style: italic;
+    text-transform: capitalize;
+    text-shadow: none;
+}
+ 
+.banner-desc {
+    max-width: 40%;
+    color: var(--gray);
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 25px 0 35px;
+}
+
+.btn {
+    background: var(--primary);
+    color: var(--light);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    transition: transform .25s ease, background .25s ease;
+}
+
+.btn:hover,
+.btn:focus {    
+    background: var(--secondary);
+    transform: scale(1.05) translateX(5px);
+    outline: none;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0 100px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.img {
+    background-image: url(./capa.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 380px;
+    height: 480px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #0b0c10bf, 20px 20px 0 #E639465f;
+}
+
+.text { 
+    width: 50%;
+}
+
+h2 {
+    font-family: var(--title);
+    text-transform: uppercase;
+    font-size: 42px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    color: var(--light);
+}
+
+.text p {
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 15px;
+}
+
+blockquote {
+    color: var(--light);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 30px 0 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary);
+}
+
+footer {
+    border-top: 1px solid var(--gray);
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+footer .marca {
+    font-family: var(--title);
+    color: var(--light);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 500px) {
+    #banner {
+        padding: 10px 20px 0;
+        height: 100vh;
+        align-items: center;
+        background-image: linear-gradient(180deg, #0b0c1026 0%, #0b0c108c 40%, var(--dark) 100%), url(./banner.jpg);
+    }
+    
+    .banner-desc {
+        max-width: 100%;
+        margin: 35px 0 50px;
+    }
+    
+    h1 {
+        font-size: 50px;
+        
+        span {
+            font-size: 28px;
+        }
+    }
+
+    .conteudo {
+        flex-direction: column;
+        max-width: 85%;
+        padding-top: 0;
+    }
+
+    .img {
+        background-image: url(./reveal.jpg);
+        width: 100%;
+        height: 450px;
+        margin-left: -10px;
+        box-shadow: 2px 2px 10px #0b0c10bf, 15px 15px 0 #E639465f;
+    }
+ 
+    .text {
+        width: 100%;
+        
+        h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+    }
+
+    blockquote {
+        margin-top: 50px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px 0 40px;
+    }
+}
